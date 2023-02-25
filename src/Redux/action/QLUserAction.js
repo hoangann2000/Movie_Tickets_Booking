@@ -32,7 +32,7 @@ export const DangNhapAction = (thongTinND) => {
     return async (dispatch2) => {
         try {
             const result = await NDService.dangNhapND(thongTinND);
-            console.log(result, "đăng nhập")
+            console.log(result.data.content.maLoaiNguoiDung)
             if (result.data.statusCode == 200) {
                 await dispatch2({
                     type: DANG_NHAP,
@@ -45,7 +45,7 @@ export const DangNhapAction = (thongTinND) => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                if (result.maLoaiNguoiDung !== "KhachHang") {
+                if (result.data.content.maLoaiNguoiDung !== "KhachHang") {
                     history.push("/admin");
                 } else {
                     history.push("/");

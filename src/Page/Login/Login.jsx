@@ -30,7 +30,7 @@ export default function Login() {
         <Fragment>
             {/* <h1 className='title_login'>CHÀO MỪNG BẠN ĐẾN VỚI CINEMA MOVIE GROUP I</h1> */}
             <div className="login flex justify-center items-center">
-            
+
                 <div className='login_right'>
                     <div className="right_top">
                         <img src="./img/logomovie.png" alt="" />
@@ -46,11 +46,11 @@ export default function Login() {
                                 <div className="text-danger">{formik.errors.taiKhoan}</div>
                             ) : null}
                         </div>
-                        <br/>
+                        <br />
                         <div className="form-group">
                             <label htmlFor="matKhau">Mật Khẩu</label>
                             <input onChange={formik.handleChange}
-                                value={formik.values.matKhau} type="text" className="form-control" id="matKhau" name='matKhau' placeholder="Nhập mật khẩu" />
+                                value={formik.values.matKhau} type="password" className="form-control" id="matKhau" name='matKhau' placeholder="Nhập mật khẩu" />
                             {formik.touched.matKhau && formik.errors.matKhau ? (
                                 <div className="text-danger">{formik.errors.matKhau}</div>
                             ) : null}

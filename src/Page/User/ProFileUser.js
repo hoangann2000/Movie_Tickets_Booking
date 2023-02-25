@@ -25,7 +25,6 @@ export default function ProFileUser(props) {
                     <NavLink to='/info' onClick={() => {
                         setIsModalOpen(true)
                     }} className="dropdown-item" >Thông Tin Tài Khoản</NavLink>
-                    <a className="dropdown-item" href="#">Chuyển Quyền Amin</a>
                     <a onClick={() => {
                         dispatch({
                             type: DANG_XUAT,

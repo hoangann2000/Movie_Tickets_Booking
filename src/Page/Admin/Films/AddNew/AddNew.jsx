@@ -32,7 +32,7 @@ const AddNew = () => {
             maNhom: GPOUP_ID,
         },
         onSubmit: (values) => {
-            // console.log(values);
+            console.log(values);
             values.maNhom = GPOUP_ID;
             let formData = new FormData();
             for (let key in values) {

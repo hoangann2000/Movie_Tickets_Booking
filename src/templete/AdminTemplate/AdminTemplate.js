@@ -28,12 +28,12 @@ export const AdminTemplate = (props) => {
   });
 
   if (!localStorage.getItem(USER_ND)) {
-    swal("Bạn không có quyền truy cập vào trang này!", "", "warning");
+    // swal("Bạn không có quyền truy cập vào trang này!", "", "warning");
     return <Redirect to="/" />;
   }
 
   if (UserLogin.maLoaiNguoiDung !== "QuanTri") {
-    swal("Bạn không có quyền truy cập vào trang này!", "", "warning");
+    // swal("Bạn không có quyền truy cập vào trang này!", "", "warning");
     return <Redirect to="/" />;
   }
 
@@ -68,7 +68,7 @@ export const AdminTemplate = (props) => {
         localStorage.removeItem(USER_ND);
         localStorage.removeItem(TOKEN);
         localStorage.removeItem("accessToken");
-        history.push("/home");
+        history.push("/");
         window.location.reload();
       }}
       className="text-800"

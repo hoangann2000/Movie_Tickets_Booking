@@ -7,6 +7,7 @@ import { GPOUP_ID } from '../../Util/setting';
 import { useDispatch } from "react-redux";
 import { DangKyAction } from '../../Redux/action/QLUserAction';
 import { NavLink } from 'react-router-dom';
+import { Swal } from 'sweetalert2/dist/sweetalert2';
 
 export default function Register() {
     const dispatch = useDispatch()
@@ -32,14 +33,16 @@ export default function Register() {
             dispatch(DangKyAction(values))
         },
     });
+ 
+   
     return (
-        <Fragment>
+        <Fragment>        
             <div className="Rigister">
                 <div className='Rigister_right'>
                     <div className="right_top">
                         <img src="./img/logomovie.png" alt="" />
                     </div>
-                    <h1 className='title_right'>Đăng Ký tài Khoản Thành Viên</h1>
+                    <h1 className='title_right'>Đăng Ký tài Khoản Thành Viên</h1>              
                     <form onSubmit={formik.handleSubmit} className='form_rigister'>
                         <div className="form-group">
                             <label htmlFor="taiKhoan">Tài Khoản</label>
@@ -95,3 +98,4 @@ export default function Register() {
         </Fragment>
     )
 }
+
